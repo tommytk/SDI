@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\aircrafts">
+      <UniqueIdentifier>{67f4f1bd-ac53-49ab-915c-a9f91ab7afcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aircrafts\Helicopters">
+      <UniqueIdentifier>{0fbbb1e8-2237-4a0a-86e3-2b215703325c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aircrafts\Fixed Wing">
+      <UniqueIdentifier>{d40ad671-e953-4571-a86f-717dc0b631b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AirCrafts">
+      <UniqueIdentifier>{7920dcf5-8e2a-4a5b-b0fc-a8d0c001873d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AirCrafts\Fixed Wing">
+      <UniqueIdentifier>{1014204a-a4a2-4e27-a3b5-47f244c4ea7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AirCrafts\Helicopters">
+      <UniqueIdentifier>{eef440d5-79d3-43c6-96e7-ecfc3eacb0ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aircrafts\Fixed Wing\Powered Engine">
+      <UniqueIdentifier>{3a1400e7-aaeb-4a74-a680-2e989fa22953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AirCrafts\Fixed Wing\PoweredEngine">
+      <UniqueIdentifier>{d9d6c2ab-e4eb-4a34-90ec-ac96440d4aea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AirCrafts\Fixed Wing\Non Powered Engine">
+      <UniqueIdentifier>{cdefd5a0-25b8-4f33-a061-f04a1ec399c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aircrafts\Fixed Wing\Glider">
+      <UniqueIdentifier>{6ece0eaa-d05f-4e19-b1c1-213f351411aa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BinSearchTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Contra.cpp">
+      <Filter>Source Files\AirCrafts\Helicopters</Filter>
+    </ClCompile>
+    <ClCompile Include="Counter.cpp">
+      <Filter>Source Files\AirCrafts\Helicopters</Filter>
+    </ClCompile>
+    <ClCompile Include="FixedWing.cpp">
+      <Filter>Source Files\AirCrafts\Fixed Wing</Filter>
+    </ClCompile>
+    <ClCompile Include="Glider.cpp">
+      <Filter>Source Files\AirCrafts\Fixed Wing\Non Powered Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Propeller.cpp">
+      <Filter>Source Files\AirCrafts\Fixed Wing\PoweredEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Jet.cpp">
+      <Filter>Source Files\AirCrafts\Fixed Wing\PoweredEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Powered.cpp">
+      <Filter>Source Files\AirCrafts\Fixed Wing\PoweredEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="NonPowered.cpp">
+      <Filter>Source Files\AirCrafts\Fixed Wing\Non Powered Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Helicopter.cpp">
+      <Filter>Source Files\AirCrafts\Helicopters</Filter>
+    </ClCompile>
+    <ClCompile Include="Aircraft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BinSearchTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Helicopter.h">
+      <Filter>Header Files\aircrafts\Helicopters</Filter>
+    </ClInclude>
+    <ClInclude Include="Contra.h">
+      <Filter>Header Files\aircrafts\Helicopters</Filter>
+    </ClInclude>
+    <ClInclude Include="Counter.h">
+      <Filter>Header Files\aircrafts\Helicopters</Filter>
+    </ClInclude>
+    <ClInclude Include="FixedWing.h">
+      <Filter>Header Files\aircrafts\Fixed Wing</Filter>
+    </ClInclude>
+    <ClInclude Include="Jet.h">
+      <Filter>Header Files\aircrafts\Fixed Wing\Powered Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Propeller.h">
+      <Filter>Header Files\aircrafts\Fixed Wing\Powered Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Glider.h">
+      <Filter>Header Files\aircrafts\Fixed Wing\Glider</Filter>
+    </ClInclude>
+    <ClInclude Include="Powered.h">
+      <Filter>Header Files\aircrafts\Fixed Wing\Powered Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Aircraft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
