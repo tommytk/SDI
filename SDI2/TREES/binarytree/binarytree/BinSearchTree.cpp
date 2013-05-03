@@ -30,7 +30,10 @@ BinarySearchTree::NodePtr& BinarySearchTree::_search(std::string ID, NodePtr &Cu
 		return CurrentPositonInTree;
 
 	}
-	else if (ID == CurrentPositonInTree->_data->)
+	else if (ID == CurrentPositonInTree->_data->getCallSig())
+	{
+
+	}
 
 
 }

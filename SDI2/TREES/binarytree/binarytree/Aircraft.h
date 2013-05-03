@@ -2,13 +2,14 @@
 #define AIRCRAFT_H
 #include <iostream>
 #include <string>
-
-using namespace std;
-
+#include <sstream>
+//Class is created upon the theory of private member variables and the use of getters and setters to change or access them.
+//This means the varibales can't be accessed directly.
 class Aircraft
 {
 public:
-	int getCallSig();
+	//Setters variables
+	std::string getCallSig();
 	void setCallSig(std::string sig);
 	void setOwner(std::string owner);
 	void setRegNum(int serial);
@@ -18,14 +19,26 @@ public:
 	void setMaximumSpeed(int maximumSpeed);
 	void setLastAirInspection(std::string lastAirInspection);
 
+	//Getters variables
+	std::string callsig();
+	std::string owner();
+	int regNum();
+	std::string model();
+	std::string manafacturer();
+	std::string productionDate();
+	int maximumSpeed();
+	std::string lastAirInspection();
+
 private:
-	int _callSig;
-	string _owner;
+
+	std::string _callSig;
+	std::string _owner;
 	int _regNum;
-	string _model;
-	string _manufacturer;	
-	string _productionDate;
+	std::string _model;
+	std::string _manufacturer;	
+	std::string _productionDate;
 	int _maximumSpeed;
-	string _lastAirInspection
+	std::string _lastAirInspection;
+		std::string _intToStr(int number);
 };
 #endif
