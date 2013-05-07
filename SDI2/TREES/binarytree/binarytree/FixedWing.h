@@ -21,8 +21,7 @@ public:
 	int maximumClimbRate();
 protected:
 		float _wingSpan;
-		int _maximumSpeed;
 		int _minimumSpeed;
-		int _maximumClimbRate;
+		
 };
 #endif

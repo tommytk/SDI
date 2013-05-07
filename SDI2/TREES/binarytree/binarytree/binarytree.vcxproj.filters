@@ -66,12 +66,6 @@
     <ClCompile Include="Jet.cpp">
       <Filter>Source Files\AirCrafts\Fixed Wing\PoweredEngine</Filter>
     </ClCompile>
-    <ClCompile Include="Powered.cpp">
-      <Filter>Source Files\AirCrafts\Fixed Wing\PoweredEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="NonPowered.cpp">
-      <Filter>Source Files\AirCrafts\Fixed Wing\Non Powered Engine</Filter>
-    </ClCompile>
     <ClCompile Include="Helicopter.cpp">
       <Filter>Source Files\AirCrafts\Helicopters</Filter>
     </ClCompile>
@@ -92,9 +86,6 @@
     <ClInclude Include="BinSearchTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Helicopter.h">
-      <Filter>Header Files\aircrafts\Helicopters</Filter>
-    </ClInclude>
     <ClInclude Include="Contra.h">
       <Filter>Header Files\aircrafts\Helicopters</Filter>
     </ClInclude>
@@ -113,9 +104,6 @@
     <ClInclude Include="Glider.h">
       <Filter>Header Files\aircrafts\Fixed Wing\Glider</Filter>
     </ClInclude>
-    <ClInclude Include="Powered.h">
-      <Filter>Header Files\aircrafts\Fixed Wing\Powered Engine</Filter>
-    </ClInclude>
     <ClInclude Include="Aircraft.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -125,8 +113,8 @@
     <ClInclude Include="LogicLayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NonPowered.h">
-      <Filter>Header Files\aircrafts\Fixed Wing\Glider</Filter>
+    <ClInclude Include="Helicopter.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

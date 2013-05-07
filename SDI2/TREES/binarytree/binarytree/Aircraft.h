@@ -11,9 +11,11 @@ public:
 
 	virtual ~Aircraft() { };
 	virtual bool printAircraft();
+	virtual std::string aircraftToXML();
 	//Setters variables
 	std::string getCallSig();
 	void setName(std::string name);
+	void setSerial(std::string serial);
 	void setAircraftType(std::string aircraftType);
 	void setAircraftSubType(std::string aircraftSubType);
 	void setCallSig(std::string sig);
@@ -27,19 +29,27 @@ public:
 
 	//Getters variables
 	std::string name();
+	std::string serial();
 	std::string aircraftType();
 	std::string aircraftSubType();
 	std::string callSig();
 	std::string owner();
+	std::string model();
+	std::string manufacturer();
+	std::string productionDate();
 	int maximumSpeed();
 	std::string lastAirWorthinessCheck();
 
 protected:
 	std::string _name;
+	std::string _serial;
 	std::string _aircraftType;
 	std::string _aircraftSubType;
 	std::string _callSig;
 	std::string _owner;
+	std::string _model;
+	std::string _manufacturer;
+	std::string _productionDate;
 	int _maximumSpeed;
 	std::string _lastAirWorthinessCheck;
 	std::string _intToStr(int number);

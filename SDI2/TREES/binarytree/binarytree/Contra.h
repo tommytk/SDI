@@ -10,7 +10,7 @@ class Contra : public Helicopter
 {
 public:
 	Contra();
-	Contra(std::string name, std::string aircraftType,std::string aircraftSubType,std::string sig,std::string owner, std::string rotorType);
+	Contra(std::string name, std::string aircraftType,std::string aircraftSubType,std::string sig,std::string serial,std::string owner, std::string rotorType, int maximumVerticalClimbRate);
 	void setRotarType(std::string rotarType);
 	bool printAircraft();
 	std::string rotorType();

@@ -19,12 +19,15 @@ public:
 	bool retreiveByName(std::string nameToFind);
 	bool addAircraft(Aircraft* aircraftToAdd);
 	bool removeAircrafts(std::string sigToDelete);
+	
 	bool printAircrafts();
 	bool clearDatastore();
 	Aircraft* findClosestSig(std::string sig);
 private:
 	int min(int a, int b);
 	BinarySearchTree _AircraftStore;
+	Aircraft* _XMLtoAircraft(std::string aircraftXML);
+	std::string _findXmlData(std::string aircraftXML, std::string variableType, std::string XMLtagName);
 };
 
 #endif

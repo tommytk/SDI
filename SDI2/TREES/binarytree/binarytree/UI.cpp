@@ -42,7 +42,7 @@ void UserInterface::displayMenu()
 void UserInterface::addAircraft() // OPTION 1:
 {
 
-	std::string name, aircraftType, aircraftSubType, callSig, owner,model,manufacturer,productionDate, lastAirWorthinessCheck;
+	std::string name, aircraftType, aircraftSubType, callSig,serial, owner,model,manufacturer,productionDate, lastAirWorthinessCheck;
 	int maximumSpeed;
 	Aircraft* newAircraft = NULL;
 
@@ -68,13 +68,21 @@ void UserInterface::addAircraft() // OPTION 1:
 		std::getline(std::cin,callSig);
 		callSig = _signatureFormatCheck(callSig);
 	}
+	std::cout << "Enter the Aircrafts unique serial '0000': ";
+	std::getline(std::cin,serial);
 	maximumSpeed= askForInputLoop("Enter the aircrafts maximum speed: ");
 	std::cin.ignore(1,'\n');//this clears buffer before the getline() takes user input
 	std::cout << "Please enter the Owner of " << name <<std::endl;
 	std::getline(std::cin,owner);
+	std::cout << "Please enter the model of " << name <<std::endl;
+	std::getline(std::cin,model);
+	std::cout << "Please enter the manufacturer of " << name <<std::endl;
+	std::getline(std::cin,owner);
+	std::cout << "Please enter the production Date of " << name <<std::endl;
+	std::getline(std::cin,productionDate);
 	std::cout<<"Please enter whether the last airworthness check: DD/MM/YYYY "<<std::endl;
 	std::getline(std::cin,lastAirWorthinessCheck);
-
+	
 	if (_caseInsensitiveCmp(aircraftType,"Fixed Wing") == true)
 	{
 		std::cout << "Please enter the Sub-type of Fixed Wing Aircraft you wish to add (Glider, Jet or Propeller): "<<std::endl;
@@ -88,22 +96,33 @@ void UserInterface::addAircraft() // OPTION 1:
 
 		if (_caseInsensitiveCmp(aircraftSubType,"Glider") == true)
 		{
-			newAircraft = new Glider(name, aircraftType, aircraftSubType, callSig, owner,maximumSpeed,lastAirWorthinessCheck);
+			newAircraft = new Glider(name, aircraftType, aircraftSubType, callSig,serial, owner,maximumSpeed,model,manufacturer,productionDate,lastAirWorthinessCheck);
 		}
 		else if (_caseInsensitiveCmp(aircraftSubType,"Jet") == true)
 		{
-			int flightHours,numberOfEngines;
+			int flightHours,numberOfEngines,maximumClimbRate;
+			std::string jetEngineCheck;
 			flightHours= askForInputLoop("Please enter the number of flightHours the jet has: ");
 			numberOfEngines= askForInputLoop("Please enter the number of numberOfEngines the jet has: ");
-			newAircraft = new Jet(name,aircraftType,aircraftSubType,callSig,owner,maximumSpeed,lastAirWorthinessCheck,flightHours,numberOfEngines);
+			maximumClimbRate= askForInputLoop("Please enter the number of maximum climb rate: ");
+			std::cout<<"Please enter the last engine check on the: "<<name<<std::endl;
+			cin.ignore(1,'\n');
+			std::getline(std::cin,jetEngineCheck);
+			
+			newAircraft = new Jet(name,aircraftType,aircraftSubType,callSig,serial,owner,maximumSpeed,lastAirWorthinessCheck,flightHours,numberOfEngines,jetEngineCheck,maximumClimbRate);
 		}
 		else if (_caseInsensitiveCmp(aircraftSubType,"Propeller") == true)
 		{
-			int flightHours,numberOfEngines;
+			int flightHours,numberOfEngines,maximumClimbRate;
+			std::string propellerEngineCheck;
 			flightHours= askForInputLoop("Please enter the number of flightHours the Aircraft has: ");
 			numberOfEngines= askForInputLoop("Please enter the number of numberOfEngines the Aircraft has: ");
-			
-			newAircraft = new Propeller(name,aircraftType,aircraftSubType,callSig,owner,maximumSpeed,lastAirWorthinessCheck,flightHours,numberOfEngines);
+			maximumClimbRate= askForInputLoop("Please enter the number of maximum climb rate: ");
+			std::cout<< "Please enter the last check on the propeller engine for: "<< name <<std::endl;
+			cin.ignore(1,'\n');
+			std::getline(std::cin,propellerEngineCheck);
+
+			newAircraft = new Propeller(name,aircraftType,aircraftSubType,callSig,serial,owner,maximumSpeed,lastAirWorthinessCheck,flightHours,numberOfEngines,propellerEngineCheck,maximumClimbRate);
 		}
 		else
 		{
@@ -124,29 +143,32 @@ void UserInterface::addAircraft() // OPTION 1:
 		if (_caseInsensitiveCmp(aircraftSubType,"Counter") == true)
 		{
 			std::string rotorType;
+			int maximumVerticalClimbRate;
 			std::cout << "Please enter the rotor type used by this Helicopter \n(Main rotor or Tilt rotor): ";
-			
 			getline(cin,rotorType);
+			maximumVerticalClimbRate = askForInputLoop("Please enter the maximum vertical climb rate:");
+			
 			rotorType = _checkAircraftType(rotorType,"Main rotor","Tilt rotor");
 			if (rotorType == "IncorrectValue break to main loop")
 			{
 				return;
 			}
-			newAircraft = new Counter(name,aircraftType,aircraftSubType,callSig,owner,rotorType);
+			newAircraft = new Counter(name,aircraftType,aircraftSubType,callSig,serial,owner,rotorType,maximumVerticalClimbRate);
 		}
 		else if (_caseInsensitiveCmp(aircraftSubType,"Contra") == true)
 		{
-			
+			int maximumVerticalClimbRate;
 			std::string rotorType;
 			std::cout << "Please enter the rotor type used by this Helicopter \n(Tail rotor or NOTAR): ";
-			
 			getline(cin,rotorType);
+			maximumVerticalClimbRate = askForInputLoop("Please enter the maximum vertical climb rate:");
+			
 			rotorType = _checkAircraftType(rotorType,"Tail rotor","NOTAR");
 			if (rotorType == "IncorrectValue break to main loop")
 			{
 				return;
 			}
-			newAircraft = new Contra(name,aircraftType,aircraftSubType,callSig,owner,rotorType);
+			newAircraft = new Contra(name,aircraftType,aircraftSubType,callSig,serial,owner,rotorType,maximumVerticalClimbRate);
 		}
 	}
 	if (_myFunctions.addAircraft(newAircraft) == true)

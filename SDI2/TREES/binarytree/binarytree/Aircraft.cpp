@@ -4,9 +4,52 @@ bool Aircraft::printAircraft()
 	std::cout<<" Call Signature: "<<_callSig<<" Owner: "<<_owner<<"\n Maximum Speed"<<_maximumSpeed<<"Last air inspection"<<_lastAirWorthinessCheck<<std::endl;
 	return true;
 }
+std::string Aircraft::aircraftToXML()
+{
+	std::string output = "";
+	output.append("<Field _CallSignature>");
+	output.append(_callSig);
+	output.append("</Field>");
+	output.append("<Field _aircraftName>");
+	output.append(_name);
+	output.append("</Field>");
+	output.append("<Field _aircraftType>");
+	output.append(_aircraftType);
+	output.append("</Field>");
+	output.append("<Field _aircraftSubType>");
+	output.append(_aircraftSubType);
+	output.append("</Field>");
+	output.append("<Field _serial>");
+	output.append(_serial);
+	output.append("</Field>");
+	output.append("<Field _maximumSpeed>");
+	output.append(_intToStr(_maximumSpeed));
+	output.append("</Field>");
+	output.append("</Field>");
+	output.append("<Field _model>");
+	output.append(_model);
+	output.append("</Field>");
+	output.append("<Field _manafacturer>");
+	output.append(_manufacturer);
+	output.append("</Field>");
+	output.append("<Field _productionDate>");
+	output.append(_productionDate);
+	output.append("</Field>");
+	output.append("<Field _lastAirWorthinessCheck>");
+	output.append(_lastAirWorthinessCheck);
+	output.append("</Field>");
+	return output;
+}
+
+
+
 std::string Aircraft::getCallSig()
 {
 	return _callSig;
+}
+void Aircraft::setSerial(std::string serial)
+{
+	_serial = serial;
 }
 void Aircraft::setName(std::string name)
 {
@@ -40,6 +83,10 @@ void Aircraft::setlastAirWorthinessCheck(std::string lastAirWorthinessCheck)
 std::string Aircraft::name()
 {
 	return _name;
+}
+std::string Aircraft::serial()
+{
+	return _serial;
 }
 std::string Aircraft::aircraftType()
 {

@@ -16,10 +16,6 @@ void  FixedWing::setMinimumSpeed(int minimumSpeed)
 {
 	_minimumSpeed = minimumSpeed;
 }
-void  FixedWing::setMaximumClimbRate(int maximumClimbRate)
-{
-	_maximumClimbRate = maximumClimbRate;
-}
 float  FixedWing::wingSpan()
 {
 	return _wingSpan;
@@ -32,9 +28,6 @@ int  FixedWing::minimumSpeed()
 {
 	return _minimumSpeed;
 }
-int  FixedWing::maximumClimbRate()
-{
-	return _maximumClimbRate;
-}
+
 
 

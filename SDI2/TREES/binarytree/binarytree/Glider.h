@@ -8,7 +8,8 @@ class Glider : public FixedWing
 {
 public:
 	Glider();
-	Glider(std::string name, std::string aircraftType, std::string aircraftSubType, std::string sig, std::string owner,int maximumSpeed, std::string lastAirInspection);
+	Glider(std::string name, std::string aircraftType, std::string aircraftSubType, std::string sig,std::string serial, std::string owner,int maximumSpeed,std::string model,std::string manufacturer,std::string productionDate,std::string lastAirInspection);
 	bool printAircraft();
+	std::string aircraftToXML();
 };
 #endif
