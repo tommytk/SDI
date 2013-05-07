@@ -2,14 +2,19 @@
 #define CONTRA_H
 #include <iostream>
 #include <string>
-#include "Aircraft.h"
+
 #include "Helicopter.h"
 
-using namespace std;
 
-class Contra : Helicopter : Aircraft //should aircraft be included?
+class Contra : public Helicopter
 {
-private:
-		string _rotorType;
-}
+public:
+	Contra();
+	Contra(std::string name, std::string aircraftType,std::string aircraftSubType,std::string sig,std::string owner, std::string rotorType);
+	void setRotarType(std::string rotarType);
+	bool printAircraft();
+	std::string rotorType();
+protected:
+		std::string _rotorType;
+};
 #endif

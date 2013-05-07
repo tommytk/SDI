@@ -2,15 +2,13 @@
 #define GLIDER_H
 #include <iostream>
 #include <string>
-#include "Aircraft.h"
 #include "FixedWing.h"
 
-using namespace std;
-
-class Glider : FixedWing// : Aircraft
+class Glider : public FixedWing
 {
-private:
-		bool _winchable;
-		float _minimumSinkRate;
-}
+public:
+	Glider();
+	Glider(std::string name, std::string aircraftType, std::string aircraftSubType, std::string sig, std::string owner,int maximumSpeed, std::string lastAirInspection);
+	bool printAircraft();
+};
 #endif

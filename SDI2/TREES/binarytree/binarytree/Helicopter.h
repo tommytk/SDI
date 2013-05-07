@@ -6,11 +6,24 @@
 
 using namespace std;
 
-class Helicopter : Aircraft
+class Helicopter : public Aircraft
 {
-private:
-	double _maxClimbRate;
+public:
+	/*bool printAircraft();*/
+	//sets
+	void setMaximumSpeed(int maximumSpeed);
+	void setMaximumClimbRate(int maximumVerticalClimbRate);
+	void setRotorDiameter(int rotorDiameter);
+	void setRotorBladesNumber(int rotorBladesNumber);
+	//gets
+	int maximumSpeed();
+	int maximumVerticalClimbRate();
+	double rotorDiameter();
+	int rotorBladesNumber();
+protected:
+	int _maximumSpeed;
+	int _maximumVerticalClimbRate;
 	double _rotorDiameter;
-	int _rotorBladesNum;
-}
+	int _rotorBladesNumber;
+};
 #endif

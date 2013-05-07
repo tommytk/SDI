@@ -78,6 +78,15 @@
     <ClCompile Include="Aircraft.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinSearchTree.h">
@@ -109,6 +118,15 @@
     </ClInclude>
     <ClInclude Include="Aircraft.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicLayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NonPowered.h">
+      <Filter>Header Files\aircrafts\Fixed Wing\Glider</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

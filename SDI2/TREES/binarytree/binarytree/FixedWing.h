@@ -3,17 +3,26 @@
 #include <iostream>
 #include <string>
 #include "Aircraft.h"
-#include "FixedWing.h"
-#include "Powered.h"
-
 using namespace std;
 
-class  FixedWing : Aircraft
+class  FixedWing : public Aircraft
 {
-private:
+public:
+	bool printAircraft();
+	//sets
+	void setWingSpan(float wingSpan);
+	void setMaximumSpeed(int maximumSpeed);
+	void setMinimumSpeed(int minimumSpeed);
+	void setMaximumClimbRate(int maximumClimbRate);
+	//gets
+	float wingSpan();
+	int maximumSpeed();
+	int minimumSpeed();
+	int maximumClimbRate();
+protected:
 		float _wingSpan;
-		double _minimumSpeed;
-		
-		
-}
+		int _maximumSpeed;
+		int _minimumSpeed;
+		int _maximumClimbRate;
+};
 #endif

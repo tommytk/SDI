@@ -1,8 +1,24 @@
 #include "Aircraft.h"
-
+bool Aircraft::printAircraft()
+{
+	std::cout<<" Call Signature: "<<_callSig<<" Owner: "<<_owner<<"\n Maximum Speed"<<_maximumSpeed<<"Last air inspection"<<_lastAirWorthinessCheck<<std::endl;
+	return true;
+}
 std::string Aircraft::getCallSig()
 {
 	return _callSig;
+}
+void Aircraft::setName(std::string name)
+{
+	_name = name;
+}
+void Aircraft::setAircraftType(std::string aircraftType)
+{
+	_aircraftType = aircraftType;
+}
+void Aircraft::setAircraftSubType(std::string aircraftSubType)
+{
+	_aircraftSubType = aircraftSubType;
 }
 void Aircraft::setCallSig(std::string sig)
 {
@@ -12,32 +28,28 @@ void Aircraft::setOwner(std::string owner)
 {
 	_owner = owner;
 }
-void Aircraft::setRegNum(int regNum)
-{
-	_regNum = regNum
-}
-void Aircraft::setModel(std::string model)
-{
-	_model = model;
-}
-void Aircraft::setManufacturer(std::string manufacturer)
-{
-	_manufacturer = manufacturer;
-}
-void Aircraft::setProductionDate(std::string productionDate)
-{
-	_productionDate = productionDate;
-}
 void Aircraft::setMaximumSpeed(int maximumSpeed)
 {
 	_maximumSpeed = maximumSpeed;
 }
-void Aircraft::setLastAirInspection(std::string lastAirInspection)
+void Aircraft::setlastAirWorthinessCheck(std::string lastAirWorthinessCheck)
 {
-	_lastAirInspection = lastAirInspection;
+	_lastAirWorthinessCheck = lastAirWorthinessCheck;
 }
 //Getters
-std::string Aircraft::callsig()
+std::string Aircraft::name()
+{
+	return _name;
+}
+std::string Aircraft::aircraftType()
+{
+	return _aircraftType;
+}
+std::string Aircraft::aircraftSubType()
+{
+	return _aircraftSubType;
+}
+std::string Aircraft::callSig()
 {
 	return _callSig;
 }
@@ -45,29 +57,13 @@ std::string Aircraft::owner()
 {
 	return _owner;
 }
-int Aircraft::regNum()
-{
-	return _regNum;
-}
-std::string Aircraft::model()
-{
-	return _model;
-}
-std::string Aircraft::manafacturer()
-{
-	return _manufacturer;
-}
-std::string Aircraft::productionDate()
-{
-	return _productionDate;
-}
 int Aircraft::maximumSpeed()
 {
 	return _maximumSpeed;
 }
-std::string Aircraft::lastAirInspection()
+std::string Aircraft::lastAirWorthinessCheck()
 {
-	return _lastAirInspection;
+	return _lastAirWorthinessCheck;
 }
 std::string Aircraft::_intToStr(int number)//Might not need this function to convert from int to string
 {

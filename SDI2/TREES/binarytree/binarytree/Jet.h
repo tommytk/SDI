@@ -4,14 +4,23 @@
 #include <string>
 #include "Aircraft.h"
 #include "FixedWing.h"
-#include "Powered.h"
 
 using namespace std;
 
-class Jet : Powered : FixedWing : Aircraft
+class Jet : public FixedWing
 {
-private:
-		int _hoursUntilInspection;
-		bool _jetEngInspecNeeded;
-}
+public:
+	Jet();
+	Jet(std::string name, std::string aircraftType,std::string aircraftSubType,std::string sig,std::string owner,int maximumSpeed,std::string lastAirWorthinessCheck, int flightHours, int numberOfEngines);
+		bool printAircraft();
+	void setFlightHours();
+	void setNumberOfEngines();
+	int flightHours();
+	int numberOfEngines();
+
+protected:
+		int _flightHours;
+		int _numberOfEngines;
+		
+};
 #endif
