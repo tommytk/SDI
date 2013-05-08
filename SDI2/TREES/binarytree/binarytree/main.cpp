@@ -55,12 +55,12 @@ int main()
 			{
 			myUI.saveDatabase();
 			break;
-			}
+			}*/
 		case 8:
 			{
 			myUI.loadDatabase();
 			break;
-			}*/
+			}
 		/*case 9:
 			{
 			exitSelected = myUI.exit(exitSelected);

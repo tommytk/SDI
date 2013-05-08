@@ -20,7 +20,7 @@ public:
 	void deleteAircraft();
 	void searchByName();
 	void searchByID();
-	
+	void loadDatabase();
 	/*void signalComparison(int incSig);
 	void saveDatabase();
 	void loadDatabase();

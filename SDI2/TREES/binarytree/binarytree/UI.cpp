@@ -264,7 +264,22 @@ void UserInterface::printToScreen()
 {
 	_myFunctions.printAircrafts();
 }
-
+void UserInterface::loadDatabase() // OPTION 8:
+{
+	string fileInput = "";
+	char* fileToLoad = "";
+	cout<<"please enter the filename you wish to load: ";
+	cin>>fileInput;
+	try
+	{
+		_myFunctions.CSVtoAircraft(fileInput);
+	cout<<endl;
+	}
+	catch (char const* error)
+	{
+		std::cout << "Error: " << error<< std::endl;
+	}
+}
 //---------------------\\
 
 std::string UserInterface::_checkAircraftType(std::string &_aircraftType, std::string type1, std::string type2)

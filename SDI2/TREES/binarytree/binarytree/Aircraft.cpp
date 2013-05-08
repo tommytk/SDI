@@ -71,6 +71,18 @@ void Aircraft::setOwner(std::string owner)
 {
 	_owner = owner;
 }
+void Aircraft::setModel(std::string model)
+{
+	_model = model;
+}
+void Aircraft::setManufacturer(std::string manufacturer)
+{
+	_manufacturer = manufacturer;
+}
+void Aircraft::setProductionDate(std::string productionDate)
+{
+	_productionDate = productionDate;
+}
 void Aircraft::setMaximumSpeed(int maximumSpeed)
 {
 	_maximumSpeed = maximumSpeed;
@@ -103,6 +115,18 @@ std::string Aircraft::callSig()
 std::string Aircraft::owner()
 {
 	return _owner;
+}
+std::string Aircraft::model()
+{
+	return _model;
+}
+std::string Aircraft::manufacturer()
+{
+	return _manufacturer;
+}
+std::string Aircraft::productionDate()
+{
+	return _productionDate;
 }
 int Aircraft::maximumSpeed()
 {

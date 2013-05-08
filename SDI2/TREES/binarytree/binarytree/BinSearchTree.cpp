@@ -97,6 +97,86 @@ void BinarySearchTree::_addNodesToVector(std::vector<NodePtr> &nodes, NodePtr cu
 
 	return;
 }
+void BinarySearchTree::_balanceTree()
+{
+	try
+	{
+		std::vector<NodePtr> nodes;
+		_addNodesToVector(nodes,_root,true);
+		for (int idx = 0; idx <nodes.size();idx++)
+		{
+			nodes[idx]->_right = NULL;
+			nodes[idx]->_left = NULL;
+		}
+		_root = NULL;
+		_balanceHelper(nodes);
+	}
+	catch (char const* error)
+	{
+		throw error;
+	}
+}
+void BinarySearchTree::_balanceHelper(std::vector<NodePtr> nodeList)
+{
+	try
+	{
+		if (nodeList.size() <= 2)
+		{
+			for(int idx = 0; idx < nodeList.size(); idx++)
+			{
+				_insert(_root,nodeList[idx]);
+			}
+			return;
+		}
+		else
+		{
+			std::vector<NodePtr> list1,list2;
+			int medoid = _getMidPoint(nodeList);
+			_insert(_root,nodeList[medoid]);
+
+			for(int idx = 0; idx < nodeList.size(); idx++)
+			{
+				if (idx < medoid)
+				{
+					list1.push_back(nodeList[idx]);
+				}
+				if (idx > medoid)
+				{
+					list2.push_back(nodeList[idx]);
+				}
+			}
+			_balanceHelper(list1);
+			_balanceHelper(list2);
+			return;
+		}
+	}
+	catch (char const* error)
+	{
+		throw error;
+	}
+}
+void BinarySearchTree::_printTreeHelper(NodePtr node) 
+{ 
+	if (node == NULL)
+	{
+		return; 
+	}
+	_printTreeHelper(node->_left); 
+	node->_data->printAircraft();
+	_printTreeHelper(node->_right); 
+	return;
+} 
+int BinarySearchTree::_getMidPoint(std::vector<NodePtr> nodeList)
+{	
+	double mid = nodeList.size() / 2;
+	for (int idx = 0; idx <nodeList.size();idx++)
+	{
+		if ((idx == (mid+0.5))||(idx == mid))
+		{
+			return idx;
+		}
+	}
+}
 //////-----------------------\\\\\\
 ///// Binary Tree Public Functions.
 ////   AND WHAT.
@@ -111,7 +191,8 @@ bool BinarySearchTree::addItem(Aircraft* itemToAdd)
 		if(_insert(_root,toAdd) == 1) //  Check whether the insert function returns true IE = 1. We use root to start at the top of the 
 		{
 			_nodeCount++; // Increase the node count as we have added a new node
-			/*_balanceTree();*/
+			_balanceTree();
+			printTree();
 			return true;
 		}
 		else
@@ -142,6 +223,7 @@ bool BinarySearchTree::remove(std::string idToDelete)
 	{
 		ptrPos = toDelete->_right;
 	}
+	
 	else if (toDelete->_right != NULL) // If there is a right node then insert the data into that one, otherwise we just delete the data in the current one
 	{
 		_insert(ptrPos,toDelete->_right);
@@ -195,4 +277,8 @@ std::vector<Aircraft*> BinarySearchTree::getDataAsVector()
 	return aircraftList;
 
 
+}
+void BinarySearchTree::printTree()
+{
+	_printTreeHelper(_root);
 }

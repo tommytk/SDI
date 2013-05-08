@@ -43,6 +43,9 @@ std::string Glider::aircraftToXML()
 	output.append("<Field _serial>");
 	output.append(_serial);
 	output.append("</Field>");
+	output.append("<Field _owner>");
+	output.append(_owner);
+	output.append("</Field>");
 	output.append("<Field _maximumSpeed>");
 	output.append(_intToStr(_maximumSpeed));
 	output.append("</Field>");
