@@ -44,33 +44,32 @@ int main()
 			myUI.printToScreen();
 			break;
 			}
-		/*case 6:
+		case 6:
 			{
-			int sig; 
-			sig = (rand()%10000);
-			myUI.signalComparison(sig);
+			myUI.edit();
 			break;
 			}
 		case 7:
 			{
-			myUI.saveDatabase();
+			myUI.save();
 			break;
-			}*/
+			}
 		case 8:
 			{
 			myUI.loadDatabase();
 			break;
 			}
-		/*case 9:
+		case 9:
 			{
 			exitSelected = myUI.exit(exitSelected);
 			break;
-			}*/
-		/*default:
+			}
+		
+		default:
 			{
 			myUI.selectionInvalid();
 			break;
-			}*/
+			}
 		}
 	} while (!exitSelected);
 	return 0;

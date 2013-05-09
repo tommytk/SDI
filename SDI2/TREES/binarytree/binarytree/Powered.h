@@ -7,11 +7,22 @@
 
 using namespace std;
 
-class Powered : FixedWing : Aircraft
+class Powered : public FixedWing
 {
-private:
-		int _numEngines;
-		int _hoursOperated;
-		double _maxClimbRate;
-}
+public:
+	Powered();
+	void setFlightHours(int flightHours);
+	void setNumberOfEngines(int numberOfEngines);
+	void setJetEngineCheck(std::string lastEngineCheck);
+	void setMaximumClimbRate(int maximumClimbRate);
+	int flightHours();
+	int maximumClimbRate();
+	int numberOfEngines();
+	std::string jetEngineCheck();
+protected:
+		int _numberOfEngines;
+		int _flightHours;
+		std::string _lastEngineCheck;
+		int _maximumClimbRate;
+};
 #endif

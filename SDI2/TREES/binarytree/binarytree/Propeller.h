@@ -2,27 +2,18 @@
 #define PROPELLER_H
 #include <iostream>
 #include <string>
-#include "Aircraft.h"
-#include "FixedWing.h"
+#include "Powered.h"
 
 using namespace std;
 
-class Propeller : public FixedWing
+class Propeller : public Powered
 {
 public:
 	Propeller();
-	Propeller(std::string name,std::string aircraftType,std::string aircraftSubType,std::string callSig,std::string serial,std::string owner,int maximumSpeed,std::string lastAirWorthinessCheck,int flightHours,int numberOfEngines, std::string propellerEngineCheck, int maximumClimbRate);
+	Propeller(std::string name, std::string aircraftType,std::string aircraftSubType,std::string sig,std::string serial,std::string owner,std::string model,std::string manufacturer,std::string productionDate,int maximumSpeed,std::string lastAirWorthinessCheck, int flightHours, int numberOfEngines, std::string lastEngineCheck, int maximumClimbRate);
 	bool printAircraft();
-	void setFlightHours();
-	void setNumberOfEngines();
-	int flightHours();
-	int numberOfEngines();
-	void setPropellerEngineCheck(std::string propellerEngineCheck);
-	std::string propellerEngineCheck();
+	std::string aircraftToCSV();
 protected:
-		int _flightHours;
-		int _maximumClimbRate;
-		int _numberOfEngines;
-		std::string _propellerEngineCheck;
+
 };
 #endif

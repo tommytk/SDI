@@ -24,29 +24,39 @@ BinarySearchTree::BinarySearchTree()
 	_root = NULL;
 	_nodeCount = 0;
 }
+BinarySearchTree::~BinarySearchTree()
+{
+}
 BinarySearchTree::NodePtr& BinarySearchTree::_search(std::string ID, NodePtr &CurrentPositonInTree)
 {
-	if(CurrentPositonInTree == NULL)//If the tree is empty or there is a missing node
+	try
 	{
-		return CurrentPositonInTree;
+		if(CurrentPositonInTree == NULL)//If the tree is empty or there is a missing node
+		{
+			return CurrentPositonInTree;
 
+		}
+		else if (ID == CurrentPositonInTree->_data->getCallSig())// The ID entered matches the Aircraft ID held by the current node.
+		{
+			return CurrentPositonInTree;
+		}
+		// If its not in the current node then we work out what child node to move to.
+		else if (CurrentPositonInTree->_data->callSig() < ID)
+		{
+			return _search(ID, CurrentPositonInTree->_right); //restarts the search with the currentpositionintree as the relevant child node.
+		}
+		else if (CurrentPositonInTree->_data->callSig() > ID)
+		{
+			return _search(ID, CurrentPositonInTree->_left);
+		}
+		else
+		{
+			throw "Un-able to find position in tree";
+		}
 	}
-	else if (ID == CurrentPositonInTree->_data->getCallSig())// The ID entered matches the Aircraft ID held by the current node.
+	catch(const char* error)
 	{
-		return CurrentPositonInTree;
-	}
-	// If its not in the current node then we work out what child node to move to.
-	else if (CurrentPositonInTree->_data->callSig() < ID)
-	{
-		return _search(ID, CurrentPositonInTree->_right); //restarts the search with the currentpositionintree as the relevant child node.
-	}
-	else if (CurrentPositonInTree->_data->callSig() > ID)
-	{
-		return _search(ID, CurrentPositonInTree->_left);
-	}
-	else
-	{
-		throw "Un-able to find position in tree";
+		throw error;
 	}
 
 }
@@ -77,25 +87,33 @@ bool BinarySearchTree::_insert(NodePtr &CurrentPositionInTree,NodePtr insertPtr)
 		throw error;
 	}
 }
+
 void BinarySearchTree::_addNodesToVector(std::vector<NodePtr> &nodes, NodePtr currentPostitionInTree, bool toBalance)
 {
-	if (currentPostitionInTree == NULL)
+	try
 	{
-		return; 
-	}
-	_addNodesToVector(nodes,currentPostitionInTree->_left); 
-	nodes.push_back(currentPostitionInTree);
-	if(toBalance)
-	{
-		currentPostitionInTree->_left = NULL;
-	}
-	_addNodesToVector(nodes,currentPostitionInTree->_right); 
-	if(toBalance)
-	{
-		currentPostitionInTree->_right = NULL;
-	}
+		if (currentPostitionInTree == NULL)
+		{
+			return; 
+		}
+		_addNodesToVector(nodes,currentPostitionInTree->_left); 
+		nodes.push_back(currentPostitionInTree);
+		if(toBalance)
+		{
+			currentPostitionInTree->_left = NULL;
+		}
+		_addNodesToVector(nodes,currentPostitionInTree->_right); 
+		if(toBalance)
+		{
+			currentPostitionInTree->_right = NULL;
+		}
 
-	return;
+		return;
+	}
+	catch (const char* error)
+	{
+		throw error;
+	}
 }
 void BinarySearchTree::_balanceTree()
 {
@@ -155,17 +173,6 @@ void BinarySearchTree::_balanceHelper(std::vector<NodePtr> nodeList)
 		throw error;
 	}
 }
-void BinarySearchTree::_printTreeHelper(NodePtr node) 
-{ 
-	if (node == NULL)
-	{
-		return; 
-	}
-	_printTreeHelper(node->_left); 
-	node->_data->printAircraft();
-	_printTreeHelper(node->_right); 
-	return;
-} 
 int BinarySearchTree::_getMidPoint(std::vector<NodePtr> nodeList)
 {	
 	double mid = nodeList.size() / 2;
@@ -176,6 +183,18 @@ int BinarySearchTree::_getMidPoint(std::vector<NodePtr> nodeList)
 			return idx;
 		}
 	}
+}
+void BinarySearchTree::_clearTreeHelper(NodePtr currentPositionInTree)
+{
+	if (currentPositionInTree == NULL)
+	{
+		return; 
+	}
+	_clearTreeHelper(currentPositionInTree->_left); 
+	_clearTreeHelper(currentPositionInTree->_right);
+	delete currentPositionInTree->_data;
+	delete currentPositionInTree;
+	return;
 }
 //////-----------------------\\\\\\
 ///// Binary Tree Public Functions.
@@ -192,7 +211,6 @@ bool BinarySearchTree::addItem(Aircraft* itemToAdd)
 		{
 			_nodeCount++; // Increase the node count as we have added a new node
 			_balanceTree();
-			printTree();
 			return true;
 		}
 		else
@@ -238,6 +256,10 @@ bool BinarySearchTree::remove(std::string idToDelete)
 	 throw error;
  }
 }
+void BinarySearchTree::clearTree()
+{
+	_clearTreeHelper(_root);
+}
 int BinarySearchTree::getSize() const
 {
 	return _nodeCount;
@@ -278,7 +300,4 @@ std::vector<Aircraft*> BinarySearchTree::getDataAsVector()
 
 
 }
-void BinarySearchTree::printTree()
-{
-	_printTreeHelper(_root);
-}
+

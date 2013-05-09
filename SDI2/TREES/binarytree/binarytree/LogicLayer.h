@@ -22,16 +22,16 @@ public:
 	bool retreveBySig(std::string sigToFind);
 	bool retreiveByName(std::string nameToFind);
 	bool addAircraft(Aircraft* aircraftToAdd);
+	bool editData(std::string ID);
+	bool dataSave(std::string filename);
 	bool removeAircrafts(std::string sigToDelete);
 	Aircraft* CSVtoAircraft(std::string filename);
-	/*bool LoadAircraftInput(std::string fileName);*/
 	bool printAircrafts();
 	bool clearDatastore();
 	Aircraft* findClosestSig(std::string sig);
 private:
 	int min(int a, int b);
 	BinarySearchTree _AircraftStore;
-	std::string _findXmlData(std::string aircraftXML, std::string variableType, std::string XMLtagName);
 	std::vector<std::string> csv(string sentence);
 };
 

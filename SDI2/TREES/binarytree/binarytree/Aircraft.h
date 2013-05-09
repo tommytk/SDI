@@ -11,7 +11,7 @@ public:
 
 	virtual ~Aircraft() { };
 	virtual bool printAircraft();
-	virtual std::string aircraftToXML();
+	virtual std::string aircraftToCSV();
 	//Setters variables
 	std::string getCallSig();
 	void setName(std::string name);
@@ -53,5 +53,6 @@ protected:
 	int _maximumSpeed;
 	std::string _lastAirWorthinessCheck;
 	std::string _intToStr(int number);
+	std::string _dblToStr(double dbl);
 };
 #endif

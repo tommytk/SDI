@@ -2,14 +2,15 @@
 #define GLIDER_H
 #include <iostream>
 #include <string>
-#include "FixedWing.h"
+#include "NonPowered.h"
 
-class Glider : public FixedWing
+class Glider : public NonPowered
 {
 public:
 	Glider();
 	Glider(std::string name, std::string aircraftType, std::string aircraftSubType, std::string sig,std::string serial, std::string owner,int maximumSpeed,std::string model,std::string manufacturer,std::string productionDate,std::string lastAirInspection);
 	bool printAircraft();
-	std::string aircraftToXML();
+	std::string aircraftToCSV();
+
 };
 #endif

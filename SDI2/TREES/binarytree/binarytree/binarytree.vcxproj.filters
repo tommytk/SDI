@@ -43,6 +43,12 @@
     <Filter Include="Header Files\aircrafts\Fixed Wing\Glider">
       <UniqueIdentifier>{6ece0eaa-d05f-4e19-b1c1-213f351411aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\aircrafts\Helicopters\Contra">
+      <UniqueIdentifier>{1df5a2ba-30f1-4faa-9d2a-9ea2360e8bb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\aircrafts\Helicopters\Counter">
+      <UniqueIdentifier>{1bfc5d92-78c2-4862-8fc9-84213aa51e27}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BinSearchTree.cpp">
@@ -81,16 +87,28 @@
     <ClCompile Include="LogicLayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="NonPowered.cpp">
+      <Filter>Source Files\AirCrafts\Fixed Wing\Non Powered Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Powered.cpp">
+      <Filter>Source Files\AirCrafts\Fixed Wing\PoweredEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="MainRotor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TailRotor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Notar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TiltRotor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinSearchTree.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Contra.h">
-      <Filter>Header Files\aircrafts\Helicopters</Filter>
-    </ClInclude>
-    <ClInclude Include="Counter.h">
-      <Filter>Header Files\aircrafts\Helicopters</Filter>
     </ClInclude>
     <ClInclude Include="FixedWing.h">
       <Filter>Header Files\aircrafts\Fixed Wing</Filter>
@@ -116,5 +134,32 @@
     <ClInclude Include="Helicopter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Powered.h">
+      <Filter>Header Files\aircrafts\Fixed Wing\Powered Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="NonPowered.h">
+      <Filter>Header Files\aircrafts\Fixed Wing\Glider</Filter>
+    </ClInclude>
+    <ClInclude Include="Contra.h">
+      <Filter>Header Files\aircrafts\Helicopters\Contra</Filter>
+    </ClInclude>
+    <ClInclude Include="Counter.h">
+      <Filter>Header Files\aircrafts\Helicopters\Counter</Filter>
+    </ClInclude>
+    <ClInclude Include="MainRotor.h">
+      <Filter>Header Files\aircrafts\Helicopters\Contra</Filter>
+    </ClInclude>
+    <ClInclude Include="TiltRotor.h">
+      <Filter>Header Files\aircrafts\Helicopters\Contra</Filter>
+    </ClInclude>
+    <ClInclude Include="Notar.h">
+      <Filter>Header Files\aircrafts\Helicopters\Counter</Filter>
+    </ClInclude>
+    <ClInclude Include="TailRotor.h">
+      <Filter>Header Files\aircrafts\Helicopters\Counter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

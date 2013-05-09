@@ -5,19 +5,31 @@ Contra::Contra()
 	_aircraftSubType = "Contra";
 	_rotorType = "";
 }
-Contra::Contra(std::string name, std::string aircraftType,std::string aircraftSubType,std::string sig,std::string serial,std::string owner, std::string rotorType, int maximumVerticalClimbRate)
+Contra::Contra(std::string name, std::string aircraftType,std::string aircraftSubType,std::string sig,std::string serial,std::string owner,std::string model, std::string manufacturer, std::string productionDate,std::string lastAirWorthinessCheck, std::string rotorType,int rotorBladesNumber,double rotorDiameter,int maximumVerticalClimbRate)
 {
 	_name = name;
-	 /*_aircraftType = "Fixed Wing";
-	 _aircraftSubType = "Jet";*/
+	_aircraftType = "Helicopter";
+	_aircraftSubType = "Contra";
 	_callSig = sig;
 	_serial = serial;
 	 _owner = owner;
+	 _model = model;
+	 _manufacturer = manufacturer;
+	 _productionDate = productionDate;
+	 _lastAirWorthinessCheck = lastAirWorthinessCheck;
 	 _rotorType = rotorType;
+	 _rotorBladesNumber = rotorBladesNumber;
+		 _rotorDiameter = rotorDiameter;
 	 _maximumVerticalClimbRate = maximumVerticalClimbRate;
 }
 bool Contra::printAircraft()
 {
-	std::cout<<"Aircrafts name: "<<_name<< "\n Aircraft Type: "<<_aircraftType << " \n Aircraft Sub Type: " <<_aircraftSubType <<" \n Aircraft call signature: "<<_callSig<<"\n The serial is:"<<_serial<<" \n Owner: "<<_owner<<" \n Maximum Speed"<<_maximumSpeed<<" \n Last air inspection"<<_lastAirWorthinessCheck<<"The max vertical climb rate is: "<<_maximumVerticalClimbRate <<std::endl;
+	std::cout<<"Aircrafts name: "<<_name<< "\n Aircraft Type: "<<_aircraftType << " \n Aircraft Sub Type: " <<_aircraftSubType <<" \n Aircraft call signature: "<<_callSig<<"\n The serial is:"<<_serial<<" \n Owner: "<<_owner<<"\n The model is: "<<_model<<"\n The manufacturer is: "<<_manufacturer<<"\n The production date is: "<<_productionDate<<" \n Maximum Speed"<<_maximumSpeed<<" \n Last air inspection"<<_lastAirWorthinessCheck<<"The max vertical climb rate is: "<<_maximumVerticalClimbRate <<std::endl;
 	return true;
+}
+std::string Contra::aircraftToCSV()
+{
+	
+	std::string data  = ""+ _aircraftType + "," +_aircraftSubType + "," + _name + "," +_callSig + "," + _serial + "," + _intToStr(_maximumSpeed) + "," + _owner + "," + _model + "," + _manufacturer + "," + _productionDate +"," + _lastAirWorthinessCheck + "," + _rotorType +"," + _intToStr(_rotorBladesNumber) +"," + _dblToStr(_rotorDiameter) + "," +  _intToStr(_maximumVerticalClimbRate) + "";
+	return data;
 }

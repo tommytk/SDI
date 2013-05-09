@@ -23,20 +23,21 @@ private:
 	typedef class treeNode* NodePtr;
 	NodePtr _root;
 	int _nodeCount;
+	 
 	NodePtr &_search(std::string ID, NodePtr &curr);
-	void _printTreeHelper(NodePtr node);
 	bool _insert(NodePtr &curr,NodePtr insertPTR);
 	void _addNodesToVector(std::vector<NodePtr> &nodes,NodePtr curr,bool toBalance = false);
 	void _balanceTree();
 	void _balanceHelper(std::vector<NodePtr> nodeList);
 	int _getMidPoint(std::vector<NodePtr> nodeList);
+	void _clearTreeHelper(NodePtr currentPositionInTree);
 public:
 	BinarySearchTree();
-
-	/*bool isEmpty() const { return root==NULL; }*/
-	void printTree();
+	~BinarySearchTree();
+	
 	bool addItem(Aircraft* itemToAdd);
 	bool remove(std::string idToRemove);
+	void clearTree();
 	int getSize()const;
 	Aircraft* retreiveByCallSig(std::string ID);
 	std::vector<Aircraft*> getDataAsVector();

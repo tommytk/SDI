@@ -1,47 +1,15 @@
 #include "Aircraft.h"
 bool Aircraft::printAircraft()
 {
-	std::cout<<" Call Signature: "<<_callSig<<" Owner: "<<_owner<<"\n Maximum Speed"<<_maximumSpeed<<"Last air inspection"<<_lastAirWorthinessCheck<<std::endl;
+	std::cout<<"The Aircraft type is: "<<_aircraftType<<"\n The Aircraft Sub Type is: "<<_aircraftSubType<<"\n The name is: "<<_name <<"\n The Call Signature is : "<<_callSig<<"\n The serial is: "<<_serial <<"\n The Maximum Speed is: "<<_maximumSpeed<<" Owner: "<<_owner<<"\n The model is: "<<_model<<"\n The manufacturer is: "<<_manufacturer<<"Last air inspection"<<"\n The production date: "<<_productionDate<<_lastAirWorthinessCheck<<std::endl;
 	return true;
 }
-std::string Aircraft::aircraftToXML()
+std::string Aircraft::aircraftToCSV()
 {
-	std::string output = "";
-	output.append("<Field _CallSignature>");
-	output.append(_callSig);
-	output.append("</Field>");
-	output.append("<Field _aircraftName>");
-	output.append(_name);
-	output.append("</Field>");
-	output.append("<Field _aircraftType>");
-	output.append(_aircraftType);
-	output.append("</Field>");
-	output.append("<Field _aircraftSubType>");
-	output.append(_aircraftSubType);
-	output.append("</Field>");
-	output.append("<Field _serial>");
-	output.append(_serial);
-	output.append("</Field>");
-	output.append("<Field _maximumSpeed>");
-	output.append(_intToStr(_maximumSpeed));
-	output.append("</Field>");
-	output.append("</Field>");
-	output.append("<Field _model>");
-	output.append(_model);
-	output.append("</Field>");
-	output.append("<Field _manafacturer>");
-	output.append(_manufacturer);
-	output.append("</Field>");
-	output.append("<Field _productionDate>");
-	output.append(_productionDate);
-	output.append("</Field>");
-	output.append("<Field _lastAirWorthinessCheck>");
-	output.append(_lastAirWorthinessCheck);
-	output.append("</Field>");
-	return output;
+	
+	std::string data  = ""+ _aircraftType + "," +_aircraftSubType + "," + _name + "," +_callSig + "," + _serial + "," + _intToStr(_maximumSpeed) + "," + _owner + "," + _model + "," + _manufacturer + "," +_productionDate +"," + _lastAirWorthinessCheck + "";
+	return data;
 }
-
-
 
 std::string Aircraft::getCallSig()
 {
@@ -141,4 +109,11 @@ std::string Aircraft::_intToStr(int number)//Might not need this function to con
 	std::stringstream stream;
 	stream << number;
 	return stream.str();
+}
+std::string Aircraft::_dblToStr(double dbl)
+{
+	std::ostringstream strs;
+strs << dbl;
+std::string str = strs.str();
+return str;
 }

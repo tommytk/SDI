@@ -15,23 +15,25 @@ class UserInterface
 public:
 	int askForInputLoop(std::string question);
 	void displayMenu();
+	void save();
 	void addAircraft();
+	void edit();
 	void printToScreen();
 	void deleteAircraft();
-	void searchByName();
+	bool searchByName();
+	void selectionInvalid();
 	void searchByID();
 	void loadDatabase();
-	/*void signalComparison(int incSig);
-	void saveDatabase();
-	void loadDatabase();
 	bool exit(bool &exitSelected);
-	void selectionInvalid();*/
+	
+	
 private:
 
 	std::string _intToStr(int number);
-	/*bool _exitCheck();
-	bool _saveUponExitCheck();*/
+	bool _exitCheck();
+	bool _saveUponExitCheck();
 	DataManipulation _myFunctions;
+	BinarySearchTree _binSearchTree;
 	std::string _checkAircraftType(std::string &_aircraftType, std::string type1, std::string type2);
 	std::string _checkAircraftType(std::string &_aircraftType, std::string type1, std::string type2, std::string type3);
 	bool _caseInsensitiveCmp(std::string a, std::string b);

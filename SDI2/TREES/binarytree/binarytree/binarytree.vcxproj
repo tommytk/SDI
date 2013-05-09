@@ -86,7 +86,13 @@
     <ClCompile Include="Jet.cpp" />
     <ClCompile Include="LogicLayer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainRotor.cpp" />
+    <ClCompile Include="NonPowered.cpp" />
+    <ClCompile Include="Notar.cpp" />
+    <ClCompile Include="Powered.cpp" />
     <ClCompile Include="Propeller.cpp" />
+    <ClCompile Include="TailRotor.cpp" />
+    <ClCompile Include="TiltRotor.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -99,8 +105,17 @@
     <ClInclude Include="Helicopter.h" />
     <ClInclude Include="Jet.h" />
     <ClInclude Include="LogicLayer.h" />
+    <ClInclude Include="MainRotor.h" />
+    <ClInclude Include="NonPowered.h" />
+    <ClInclude Include="Notar.h" />
+    <ClInclude Include="Powered.h" />
     <ClInclude Include="Propeller.h" />
+    <ClInclude Include="TailRotor.h" />
+    <ClInclude Include="TiltRotor.h" />
     <ClInclude Include="UI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
