@@ -10,7 +10,7 @@ bool DataManipulation::addAircraft(Aircraft *aircraftToAdd)
 	}
 	catch (char const* error)
 	{
-		std::cout<<"Error: "<<error<<std::endl;
+		throw error;
 	}
 }
 
@@ -29,8 +29,9 @@ bool DataManipulation::printAircrafts()
 		{
 			aircrafts[idx]->printAircraft();
 			std::cout<<"\n ---------------------------------------------" <<std::endl;
-			return true;
+			
 		}
+		return true;
 	}
 	catch(const char* error)
 	{
@@ -50,26 +51,37 @@ bool DataManipulation::removeAircrafts(std::string sigToDelete)
 		}
 		else
 		{
+			throw "---- Remove function failed ----";
 			return false;
 		}
 	}
 	catch (char const* error)
 	{
-		std::cout<<"Error: "<<error<<std::endl;
+		throw error;
 	}
 }
-bool DataManipulation::retreveBySig(std::string sigToFind)
+bool DataManipulation::retreveBySig(std::string sigToFind, bool dataCheck)
 {
 	try
 	{
-		if (_AircraftStore.retreiveByCallSig(sigToFind) != NULL)
-		{ 
-			Aircraft* retreived = _AircraftStore.retreiveByCallSig(sigToFind);
-
-			std::cout<<" ---------- Loading ------------"<<std::endl;
-			std::cout<< "------- Aircraft Found --------- "<< std::endl;
-			retreived->printAircraft();
-			return true;
+		Aircraft* retreive = _AircraftStore.retreiveByCallSig(sigToFind, dataCheck);
+		if(dataCheck == true)
+		{
+			if(retreive != NULL)
+			{
+				return true;
+			}else
+			{
+				return false;
+			}
+		}else
+		{
+			if (retreive != NULL)
+			{
+				Aircraft* retreived = _AircraftStore.retreiveByCallSig(sigToFind, dataCheck);
+				retreived->printAircraft();
+				return true;
+			}
 		}
 
 		return false;
@@ -81,6 +93,7 @@ bool DataManipulation::retreveBySig(std::string sigToFind)
 }
 bool DataManipulation::retreiveByName(std::string nameToFind)
 {
+	bool found = false;
 	try
 	{
 	std::vector<Aircraft*> aircrafts = _AircraftStore.getDataAsVector();
@@ -92,10 +105,14 @@ bool DataManipulation::retreiveByName(std::string nameToFind)
 			aircrafts[idx]->printAircraft();
 			std::cout<<"\n ---------------------------------------------" <<std::endl;
 			return true;
+			found = true;
 		}
+		
+	}
+	if(found == false)
+	{
 		throw "Aircraft Not found";
 	}
-	
 	}
 	catch(const char* error)
 	{
@@ -111,9 +128,9 @@ Aircraft* DataManipulation::CSVtoAircraft(std::string filename)
 	std::stringstream ss;
 	std::vector<std::string> fields;  //the aircraft data
 	int counter= 0;
-	try
+	/*try
 	{
-
+*/
 
 		filestr.open(filename); 
 		if(filestr.is_open())
@@ -284,13 +301,12 @@ Aircraft* DataManipulation::CSVtoAircraft(std::string filename)
 				}
 			}
 		}
-	}
-	catch(char const* error)
+	/*catch(char const* error)
 	{
 		std::cout<< "Error occured: "<<error<<std::endl;
 		throw error;
-	}
-	return tempAircraft;
+	}*/
+	
 }
 bool DataManipulation::editData(std::string ID)
 {
@@ -310,12 +326,12 @@ bool DataManipulation::editData(std::string ID)
 			i = idx;
 			
 		}
-		if(count == NULL)
+		
+	}
+	if(count == NULL)
 		{
 			throw "Couldn't find Name in tree";
 		}
-	}
-
 	std::string name;
 	std::string owner;
 	int maxSpeed;
@@ -325,7 +341,7 @@ bool DataManipulation::editData(std::string ID)
 	std::string ProDate;
 	std::string LastAirCheck;
 	std::cout<<"Set the name: ";
-	std::cin.ignore(1,'n');
+	std::cin.ignore(1,'\n');
 	std::getline(std::cin,name);
 	aircrafts[i]->setName(name);
 	std::cout<<"\n Set the Owner: ";

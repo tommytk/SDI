@@ -1,7 +1,7 @@
 #include "Aircraft.h"
 bool Aircraft::printAircraft()
 {
-	std::cout<<"The Aircraft type is: "<<_aircraftType<<"\n The Aircraft Sub Type is: "<<_aircraftSubType<<"\n The name is: "<<_name <<"\n The Call Signature is : "<<_callSig<<"\n The serial is: "<<_serial <<"\n The Maximum Speed is: "<<_maximumSpeed<<" Owner: "<<_owner<<"\n The model is: "<<_model<<"\n The manufacturer is: "<<_manufacturer<<"Last air inspection"<<"\n The production date: "<<_productionDate<<_lastAirWorthinessCheck<<std::endl;
+	std::cout<<"The Aircraft type is: "<<_aircraftType<<"\n The Aircraft Sub Type is: "<<_aircraftSubType<<"\n The name is: "<<_name <<"\n The Call Signature is : "<<_callSig<<"\n The serial is: "<<_serial <<"\n The Maximum Speed is: "<<_maximumSpeed<<" Owner: "<<_owner<<"\n The model is: "<<_model<<"\n The manufacturer is: "<<_manufacturer<<"\n The production date: "<<_productionDate<<"\n The last Air worthiness inspection was: "<<_lastAirWorthinessCheck<<std::endl;
 	return true;
 }
 std::string Aircraft::aircraftToCSV()

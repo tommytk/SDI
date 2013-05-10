@@ -1,21 +1,21 @@
-Helicopter,Counter,CounterSpray,1232,4532,-842150451,-842150451,Mark,J567,PlanesTrainsAndAuto,01/05/2012,01/05/2013,0,2,2
-Helicopter,Counter,CounterExtreme,1292,4532,-842150451,-842150451,Queen,J567,PlanesTrainsAndAuto,01/05/2012,01/05/2013,0,2,2
-Helicopter,Counter,CounterSprey,1342,4532,-842150451,-842150451,Gilbert,J567,SkysTheLimit,01/05/2012,01/05/2013,0,2,2
-Helicopter,Counter,CounterLannister,1382,4532,-842150451,-842150451,King,J567,HelicopterHires,01/05/2012,01/05/2013,0,2,2
-Fixed Wing,Propeller,PropellerMan,2245,4532,1,2000,Franco,J567,ThomasAndCo,01/05/2013,500,4,21/09/2012,1200
-Helicopter,Contra,ContraSprey,2359,4532,-842150451,-842150451,Franco,J567,PlanesTrainsAndAuto,01/05/2012,01/05/2013,0,2,2
-Fixed Wing,Glider,IceGlider,2453,9998,200,200,200,Tyrion,F567,ThomasAndCo
-Fixed Wing,Propeller,PropellerOblivion,2689,4532,1,2000,Jack,J567,NottinghamTransport,01/05/2013,500,4,21/09/2012,1200
-Fixed Wing,Glider,ExtremeGlider,2758,6666,200,200,200,Tom,F567,ThomasTransport
-Helicopter,Contra,ContraLannister,2850,4532,-842150451,-842150451,Gilbert,J567,HannahsHelicopters,01/05/2012,01/05/2013,0,2,2
-Fixed Wing,Propeller,PropellerHawk,3433,4532,1,2000,Ben,J567,SkysTheLimit,01/05/2013,500,4,21/09/2012,1200
-Helicopter,Contra,ContraSpray,3467,4532,-842150451,-842150451,Molly,J567,HelicopterHires,01/05/2012,01/05/2013,0,2,2
-Fixed Wing,Glider,FireGlider,4523,4532,200,200,200,Thomas,F567,PlanesTrainsAndAuto
-Fixed Wing,Jet,JetMan,4562,4532,1,1000,John,J567,ThomasAndCo,28/04/2013,200,4,17/12/2012,1100
-Fixed Wing,Glider,212Glider,4768,1234,200,200,200,Zorro,F567,RedmondLtd
-Fixed Wing,Jet,JetHawk,5238,4532,21,3000,Molly,J567,SkysTheLimit,01/05/2013,800,4,14/04/2012,2100
-Fixed Wing,Jet,JAmes,5678,9294,1,12000,Thomas And CO,FURT,,10/05/2012,200,4,01/05/2012,1200
-Fixed Wing,Jet,JetExtreme,6489,4532,1,2100,Molly,J567,RedmondLtd,07/01/2013,700,4,13/10/2012,800
-Fixed Wing,Jet,JetOblivion,7855,4532,1,2000,JD,J567,PlanesTrainsAndAuto,01/05/2013,50,4,16/05/2012,1000
-Fixed Wing,Propeller,PropellerExtreme,9494,4532,1,2000,Molly,J567,NottinghamTransport,01/05/2013,500,4,21/09/2012,1200
-Fixed Wing,Jet,JetFighter,9585,2345,1200,Thomas And Co,FGHJ,,01/05/1993,01/05/2012,5000,8,01/05/2013,1200
+Helicopter,Counter,CounterSpray,1232,4532,-842150451,-842150451,-842150451,Mark,J567,PlanesTrainsAndAuto,01/05/2012,1,0,2
+Helicopter,Counter,CounterExtreme,1292,4532,-842150451,-842150451,-842150451,Queen,J567,PlanesTrainsAndAuto,01/05/2012,1,0,2
+Helicopter,Counter,CounterSprey,1342,4532,-842150451,-842150451,-842150451,Gilbert,J567,SkysTheLimit,01/05/2012,1,0,2
+Helicopter,Counter,CounterLannister,1382,4532,-842150451,-842150451,-842150451,King,J567,HelicopterHires,01/05/2012,1,0,2
+Fixed Wing,Propeller,PropellerMan,2245,4532,0,1,2000,Franco,J567,01/05/2013,500,4,21/09/2012,1200
+Helicopter,Contra,ContraSprey,2359,4532,-842150451,-842150451,-842150451,Franco,J567,PlanesTrainsAndAuto,01/05/2012,1,0,2
+Fixed Wing,Glider,IceGlider,2453,9998,200,200,200,200,Tyrion,F567
+Fixed Wing,Propeller,PropellerOblivion,2689,4532,0,1,2000,Jack,J567,01/05/2013,500,4,21/09/2012,1200
+Fixed Wing,Glider,ExtremeGlider,2758,6666,200,200,200,200,Tom,F567
+Helicopter,Contra,ContraLannister,2850,4532,-842150451,-842150451,-842150451,Gilbert,J567,HannahsHelicopters,01/05/2012,1,0,2
+Fixed Wing,Propeller,PropellerHawk,3433,4532,0,1,2000,Ben,J567,01/05/2013,500,4,21/09/2012,1200
+Helicopter,Contra,ContraSpray,3467,4532,-842150451,-842150451,-842150451,Molly,J567,HelicopterHires,01/05/2012,1,0,2
+Fixed Wing,Glider,FireGlider,4523,4532,200,200,200,200,Thomas,F567
+Fixed Wing,Jet,JetMan,4562,4532,0,1,1000,John,J567,28/04/2013,200,4,17/12/2012,1100
+Fixed Wing,Glider,212Glider,4768,1234,200,200,200,200,Zorro,F567
+Fixed Wing,Jet,JetHawk,5238,4532,0,21,3000,Molly,J567,01/05/2013,800,4,14/04/2012,2100
+Fixed Wing,Jet,JAmes,5678,9294,0,1,12000,Thomas And CO,FURT,10/05/2012,200,4,01/05/2012,1200
+Fixed Wing,Jet,JetExtreme,6489,4532,0,1,2100,Molly,J567,07/01/2013,700,4,13/10/2012,800
+Fixed Wing,Jet,JetOblivion,7855,4532,0,1,2000,JD,J567,01/05/2013,50,4,16/05/2012,1000
+Fixed Wing,Propeller,PropellerExtreme,9494,4532,0,1,2000,Molly,J567,01/05/2013,500,4,21/09/2012,1200
+Fixed Wing,Jet,JetFighter,9585,2345,1,1200,Thomas And Co,FGHJ,,01/05/2012,5000,8,01/05/2013,1200

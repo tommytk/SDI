@@ -19,7 +19,7 @@ class DataManipulation
 {
 public:
 	bool caseInsensitiveCmp(std::string a, std::string b);
-	bool retreveBySig(std::string sigToFind);
+	bool retreveBySig(std::string sigToFind, bool dataCheck);
 	bool retreiveByName(std::string nameToFind);
 	bool addAircraft(Aircraft* aircraftToAdd);
 	bool editData(std::string ID);
@@ -28,7 +28,6 @@ public:
 	Aircraft* CSVtoAircraft(std::string filename);
 	bool printAircrafts();
 	bool clearDatastore();
-	Aircraft* findClosestSig(std::string sig);
 private:
 	int min(int a, int b);
 	BinarySearchTree _AircraftStore;

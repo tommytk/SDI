@@ -3,17 +3,16 @@
 #include <cmath>
 #include <iostream>
 
-#pragma region Main
+
 int main()
 {
-	srand((unsigned)time(0));
 	UserInterface myUI;
 	int userInput;
 	
 	bool exitSelected = false;
 	do
 	{ 
-		//TESTING CODE GOES ABOVE HERE
+		
 		
 		myUI.displayMenu();
 		std::cin >> userInput;
@@ -74,7 +73,3 @@ int main()
 	} while (!exitSelected);
 	return 0;
 }
-
-
-
-#pragma endregion 

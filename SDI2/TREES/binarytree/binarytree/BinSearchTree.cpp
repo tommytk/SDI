@@ -115,75 +115,6 @@ void BinarySearchTree::_addNodesToVector(std::vector<NodePtr> &nodes, NodePtr cu
 		throw error;
 	}
 }
-void BinarySearchTree::_balanceTree()
-{
-	try
-	{
-		std::vector<NodePtr> nodes;
-		_addNodesToVector(nodes,_root,true);
-		for (int idx = 0; idx <nodes.size();idx++)
-		{
-			nodes[idx]->_right = NULL;
-			nodes[idx]->_left = NULL;
-		}
-		_root = NULL;
-		_balanceHelper(nodes);
-	}
-	catch (char const* error)
-	{
-		throw error;
-	}
-}
-void BinarySearchTree::_balanceHelper(std::vector<NodePtr> nodeList)
-{
-	try
-	{
-		if (nodeList.size() <= 2)
-		{
-			for(int idx = 0; idx < nodeList.size(); idx++)
-			{
-				_insert(_root,nodeList[idx]);
-			}
-			return;
-		}
-		else
-		{
-			std::vector<NodePtr> list1,list2;
-			int medoid = _getMidPoint(nodeList);
-			_insert(_root,nodeList[medoid]);
-
-			for(int idx = 0; idx < nodeList.size(); idx++)
-			{
-				if (idx < medoid)
-				{
-					list1.push_back(nodeList[idx]);
-				}
-				if (idx > medoid)
-				{
-					list2.push_back(nodeList[idx]);
-				}
-			}
-			_balanceHelper(list1);
-			_balanceHelper(list2);
-			return;
-		}
-	}
-	catch (char const* error)
-	{
-		throw error;
-	}
-}
-int BinarySearchTree::_getMidPoint(std::vector<NodePtr> nodeList)
-{	
-	double mid = nodeList.size() / 2;
-	for (int idx = 0; idx <nodeList.size();idx++)
-	{
-		if ((idx == (mid+0.5))||(idx == mid))
-		{
-			return idx;
-		}
-	}
-}
 void BinarySearchTree::_clearTreeHelper(NodePtr currentPositionInTree)
 {
 	if (currentPositionInTree == NULL)
@@ -210,7 +141,7 @@ bool BinarySearchTree::addItem(Aircraft* itemToAdd)
 		if(_insert(_root,toAdd) == 1) //  Check whether the insert function returns true IE = 1. We use root to start at the top of the 
 		{
 			_nodeCount++; // Increase the node count as we have added a new node
-			_balanceTree();
+			
 			return true;
 		}
 		else
@@ -229,27 +160,27 @@ bool BinarySearchTree::remove(std::string idToDelete)
 {
  try
  {
-	NodePtr &ptrPos = _search(idToDelete,_root); // Search for the ID in the binary tree -> Load that as a reference called ptrPos
-	if (ptrPos == NULL) // If search returns null then we haven't found the ID in the tree -_-
-	{
-		throw "The item position cannot be found in the tree!";
+	 NodePtr &ptrPos = _search(idToDelete,_root); // Search for the ID in the binary tree -> Load that as a reference called ptrPos
+	 if (ptrPos == NULL) // If search returns null then we haven't found the ID in the tree -_-
+	 {
+		 throw "The item position cannot be found in the tree!";
 
-	}
-	NodePtr toDelete = ptrPos; // Create a new Pointer
-	ptrPos = toDelete->_left; // Set ptrPos as the node lower than the current ID node.
-	if (ptrPos == NULL) // If the child left node is Null, Then we do not have to remove it, just change ptrPos the the Right Node
-	{
-		ptrPos = toDelete->_right;
-	}
-	
-	else if (toDelete->_right != NULL) // If there is a right node then insert the data into that one, otherwise we just delete the data in the current one
-	{
-		_insert(ptrPos,toDelete->_right);
-	}
-	delete toDelete->_data; 
-	delete toDelete; // Delete the object and the data within the node. Nobody shall ever hear of this.
-	_nodeCount--;
-	return true;
+	 }
+	 NodePtr toDelete = ptrPos; // Create a new Pointer
+	 ptrPos = toDelete->_left; // Set ptrPos as the node lower than the current ID node.
+	 if (ptrPos == NULL) // If the child left node is Null, Then we do not have to remove it, just change ptrPos the the Right Node
+	 {
+		 ptrPos = toDelete->_right;
+	 }
+
+	 else if (toDelete->_right != NULL) // If there is a right node then insert the data into that one, otherwise we just delete the data in the current one
+	 {
+		 _insert(ptrPos,toDelete->_right);
+	 }
+	 delete toDelete->_data; 
+	 delete toDelete; // Delete the object and the data within the node. Nobody shall ever hear of this.
+	 _nodeCount--;
+	 return true;
  }
  catch(const char* error)
  {
@@ -265,18 +196,23 @@ int BinarySearchTree::getSize() const
 	return _nodeCount;
 }
 
-Aircraft* BinarySearchTree::retreiveByCallSig(std::string ID)
+Aircraft* BinarySearchTree::retreiveByCallSig(std::string ID, bool dataCheck)
 {
 	try
 	{
-		NodePtr retrieveNode = _search(ID,_root); //Search for the Id(call sig) 
+		NodePtr retrieveNode = _search(ID,_root); //Search for the Id(call sig)
 		if (retrieveNode != NULL) //IF its not null then it means it has found the relevant node
 		{
 			return retrieveNode->_data; // Return the data held in the node.
 		}
 		else
 		{
+			if(dataCheck == true)
+			{
+				return NULL;
+			}else{
 			throw "Unknown Signature!!";
+			}
 		}
 
 
