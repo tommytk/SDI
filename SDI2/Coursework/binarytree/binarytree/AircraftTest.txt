@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<aircraft>
+	<fixedWing>
+		<Glider>
+		<name>Gary the glider</name>
+		<aircraftType>fixed Wing</aircraftType>
+		<aircraftSubType>Glider</aircraftSubType>
+		<CallSig>1229</CallSig>
+		<serial>5906</serial>
+		<owner>Keith Brown</owner>
+		<maximumSpeed>155.3mph</maximumSpeed>
+		<model>DG-300</model>
+		<manufacturer>GD Fluezeugbau GmbH</manufacturer>
+		<productionDate>23rd January 1984</productionDate>
+		<lastAirWorthinessCheck>19/02/12</lastAirWorthinessCheck>
+		<wingSpan>15m</wingSpan>
+		<minimumSpeed>40mph</minimumSpeed>
+		<winchable>Yes</winchable>
+		<minimumSinkRate>0.52m/s</minimumSinkRate>
+		</Glider>
+	</fixedWing>
+</aircraft>

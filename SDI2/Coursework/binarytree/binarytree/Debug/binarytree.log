@@ -1,0 +1,31 @@
+﻿Build started 10/05/2013 12:59:49.
+     1>Project "C:\Users\Tommytk\Documents\SDI2\TREES\binarytree\binarytree\binarytree.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt BinSearchTree.cpp
+         BinSearchTree.cpp
+     1>c:\users\tommytk\documents\sdi2\trees\binarytree\binarytree\binsearchtree.cpp(208): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Tommytk\Documents\SDI2\TREES\binarytree\Debug\binarytree.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Tommytk\Documents\SDI2\TREES\binarytree\Debug\binarytree.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Tommytk\Documents\SDI2\TREES\binarytree\Debug\binarytree.lib" /MACHINE:X86 Debug\Aircraft.obj
+         Debug\BinSearchTree.obj
+         Debug\Contra.obj
+         Debug\Counter.obj
+         Debug\FixedWing.obj
+         Debug\Glider.obj
+         Debug\Helicopter.obj
+         Debug\Jet.obj
+         Debug\LogicLayer.obj
+         Debug\main.obj
+         Debug\MainRotor.obj
+         Debug\NonPowered.obj
+         Debug\Notar.obj
+         Debug\Powered.obj
+         Debug\Propeller.obj
+         Debug\TailRotor.obj
+         Debug\TiltRotor.obj
+         Debug\UI.obj
+         binarytree.vcxproj -> C:\Users\Tommytk\Documents\SDI2\TREES\binarytree\Debug\binarytree.exe
+     1>Done Building Project "C:\Users\Tommytk\Documents\SDI2\TREES\binarytree\binarytree\binarytree.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.38

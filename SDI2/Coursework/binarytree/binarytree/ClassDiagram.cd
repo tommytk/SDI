@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Aircraft" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>oCmIoACMAAAghAEAEoAEEAAAABBVAADAQTAAEEEoAAQ=</HashCode>
+      <FileName>Aircraft.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Glider" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAQAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Glider.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Jet" Collapsed="true">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Jet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Propeller" Collapsed="true">
+    <Position X="4.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Propeller.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FixedWing" Collapsed="true">
+    <Position X="2" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABAAAAAAAAAAAAEAEAQAAQAAAQAgAAAAAhEAAAAAA=</HashCode>
+      <FileName>FixedWing.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Contra" Collapsed="true">
+    <Position X="7" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Contra.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Counter" Collapsed="true">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAACAAAAAAAAAAABAAAQAQAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Counter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BinarySearchTree" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAIAQQAAEAACAAAAAkAAAAUAAgAAAAACCIAA=</HashCode>
+      <FileName>BinSearchTree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Helicopter" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAABACAYAAAAACIAEAAAQAAAgAAAAA=</HashCode>
+      <FileName>Helicopter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataManipulation" Collapsed="true">
+    <Position X="9.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAACAAAAUAAACiAABAAARACBAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>LogicLayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAACAAAAKBKgAAAEAAAIAAAAAABAAAAQEAAIAiAIAEA=</HashCode>
+      <FileName>UI.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Powered" Collapsed="true">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAARACAABAAAwAAAoAAAAAABAAAAAQAAgAABAAAQAAA=</HashCode>
+      <FileName>Powered.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NonPowered" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NonPowered.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Notar" Collapsed="true">
+    <Position X="6.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Notar.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TailRotor" Collapsed="true">
+    <Position X="10.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TailRotor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TiltRotor" Collapsed="true">
+    <Position X="8.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>TiltRotor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainRotor" Collapsed="true">
+    <Position X="12" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>MainRotor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
